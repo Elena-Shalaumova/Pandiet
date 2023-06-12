@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Pandiet.Views.MyGoalPage"
+             Background="#B9E5B0">
+
+    <ContentPage.Resources>
+        <Style TargetType="Label">
+            <Setter Property="TextColor" Value="White"/>
+        </Style>
+    </ContentPage.Resources>
+
+    <ContentPage.Content>
+
+        <StackLayout Spacing="0"
+                     VerticalOptions="CenterAndExpand"
+                     Padding="20">
+            <Label Text="МОЯ ЦЕЛЬ"
+                   FontSize="31"
+                   FontAttributes="Bold"/>
+            <StackLayout>
+                <Frame BackgroundColor="#9EC1CB"
+                   VerticalOptions="CenterAndExpand"
+                   CornerRadius="15">
+                    <StackLayout Spacing="10"
+                                 Margin="10">
+                        <Label Text=""
+                               x:Name="MyGoalName_Lable"
+                               FontSize="24"
+                               FontAttributes="Bold"
+                               HorizontalTextAlignment="Center"/>
+                        <Button Text="Изменить"
+                                BackgroundColor="#F9D1C0"
+                                CornerRadius="20"
+                                TextColor="#00232D"
+                                Margin="50, 0, 50, 0"
+                                Scale="0.8"
+                                Command="{Binding ToGoalsPageCommand}"/>
+                        <Label Text=""
+                               x:Name="MyGoalProgress_Label"
+                               FontSize="31"/>
+                        <ProgressBar ProgressColor="#B9E5B0"
+                                     Progress="0.28"
+                                     x:Name="GoalProgress_ProgressBar"/>
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+        </StackLayout>
+
+
+    </ContentPage.Content>
+</ContentPage>

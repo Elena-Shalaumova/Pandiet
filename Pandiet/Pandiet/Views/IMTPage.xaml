@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Pandiet.Views.IMTPage"
+             Background="#B9E5B0">
+    <ContentPage.Content>
+
+        <Grid Padding="15">
+            <StackLayout Spacing="0">
+                <Label Text="ИМТ"
+                       TextColor="White"
+                       FontAttributes="Bold"
+                       FontSize="31"
+                       VerticalOptions="EndAndExpand"
+                       Margin="10"/>
+                <Frame CornerRadius="20"
+                       BackgroundColor="#F9D1C0"
+                       VerticalOptions="StartAndExpand"
+                       Visual="Material">
+                    <StackLayout Padding="40"
+                                 Spacing="40">
+                        <Label FontSize="36"
+                               TextColor="White"
+                               x:Name="IMTResult_Label"
+                               HorizontalOptions="CenterAndExpand"/>
+                        <StackLayout>
+                            <Entry Placeholder="Вес (кг)"
+                                   x:Name="Weight_Label"
+                                   Text="0"    
+                                   TextChanged="Entry_TextChanged"/>
+                            <Entry Placeholder="Рост (см)"
+                                   Text="0"
+                                   x:Name="Height_Label"
+                                   TextChanged="Entry_TextChanged"/>
+                        </StackLayout>
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

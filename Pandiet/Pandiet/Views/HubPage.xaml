@@ -1,0 +1,208 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:viewmodels="clr-namespace:Pandiet.ViewModels" x:DataType="viewmodels:HubViewModel"
+             x:Class="Pandiet.Views.HubPage"
+             Background="#6A8D97">
+
+    <ContentPage.Resources>
+        <Style TargetType="Label">
+            <Setter Property="TextColor" Value="#00232D"/>
+        </Style>
+        <Style TargetType="Frame">
+            <Setter Property="CornerRadius" Value="15"/>
+            <Setter Property="HasShadow" Value="True"/>
+        </Style>
+    </ContentPage.Resources>
+    
+    <ContentPage.Content>
+        <StackLayout Spacing="10"
+                     Margin="20"
+                     Padding="5"
+                     VerticalOptions="CenterAndExpand"
+                     HorizontalOptions="CenterAndExpand"
+                     x:Name="MainHub_StackLayout">
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Frame Background="#C5E5BE"
+                       Grid.Column="0">
+                    <Grid>
+                        <StackLayout Spacing="0">
+                            <Image Source="demo_user.png"/>
+                            <Label Text=""
+                                   x:Name="UserName_Label"
+                                   HorizontalOptions="Center"
+                                   FontAttributes="Bold"
+                                   FontSize="16"/>
+                            <Label Text=""
+                                   x:Name="UserProfileMode_Label"
+                                   HorizontalOptions="Center"
+                                   FontSize="10.24"/>
+                            <Label/>
+                            <Label Text="Детальнее..."
+                                   FontSize="10.24"
+                                   HorizontalTextAlignment="End"
+                                   VerticalOptions="EndAndExpand"/>
+                        </StackLayout>
+                        <Button x:Name="Profile_Button"
+                                HorizontalOptions="FillAndExpand"
+                                VerticalOptions="FillAndExpand"
+                                BackgroundColor="Transparent"
+                                Command="{Binding ToProfilePageCommand}"/>
+                    </Grid>
+                </Frame>
+                    <StackLayout Grid.Column="1">
+                        <Frame Background="#AED2C4">
+                        <Grid>
+                            <StackLayout Orientation="Horizontal">
+                                    <Image Source="settings_icon.png"
+                                           Scale="0.9"
+                                           WidthRequest="50"
+                                           MinimumWidthRequest="32"/>
+                                    <Label Text="Настройки"
+                                           FontAttributes="Bold"
+                                           VerticalOptions="CenterAndExpand"
+                                           FontSize="16"/>
+                             
+                                </StackLayout>
+                            <Button x:Name="Settings_Button"
+                                    HorizontalOptions="FillAndExpand"
+                                    VerticalOptions="FillAndExpand"
+                                    BackgroundColor="Transparent"
+                                    Command="{Binding ToSettinsPageCommand}"/>
+                        </Grid>
+                        </Frame>
+                    <Frame Background="#B9E5B0">
+                        <Grid>
+                            <StackLayout Orientation="Horizontal"
+                                     Spacing="10">
+                            <Image Source="goal_icon.png"
+                                   WidthRequest="50"
+                                   MinimumWidthRequest="32"
+                                   Scale="0.9"/>
+                            <StackLayout Spacing="0">
+                                <Label Text="Моя цель"
+                                       FontSize="16"
+                                       FontAttributes="Bold"/>
+                                <Label Text=""
+                                       x:Name="UserGoalProgress_Label"
+                                       FontSize="31.25"
+                                       HorizontalTextAlignment="End"/>
+                                <Label Text="Изменить..."
+                                       FontSize="10.24"
+                                       VerticalOptions="EndAndExpand"
+                                       HorizontalTextAlignment="End"/>
+                            </StackLayout>
+                        </StackLayout>
+                            <Button x:Name="MyGoal_Button"
+                                    HorizontalOptions="FillAndExpand"
+                                    VerticalOptions="FillAndExpand"
+                                    BackgroundColor="Transparent"
+                                    Command="{Binding ToMyGoalPageCommand}"/>
+                        </Grid>
+                    </Frame>
+                    </StackLayout>
+            </Grid>
+            
+            <Frame>
+                <Grid>
+                    <Image Source="eat_backforframe.png"
+                           Scale="1.4"/>
+                    <StackLayout>
+                        <Label Text="Что будем кушать сегодня?"
+                               FontSize="20"
+                               FontAttributes="Bold"
+                               TextColor="White"/>
+                        <Label Text="Сегодня мы приготовили для вас лучший рацион&#10; на всей планете, поскорее нажмите, чтобы узнать&#10; что мы подобрали специально для вас!"
+                               FontSize="12"
+                               TextColor="White"/>
+                        <Label Text="Детальнее..."
+                               FontSize="10.24"
+                               HorizontalTextAlignment="End"
+                               VerticalOptions="EndAndExpand"
+                               TextColor="White"/>
+                    </StackLayout>
+                    <Button x:Name="DietToday_Button"
+                                    HorizontalOptions="FillAndExpand"
+                                    VerticalOptions="FillAndExpand"
+                                    BackgroundColor="Transparent"
+                                    Command="{Binding ToDietTodayPageCommand}"/>
+                </Grid>
+            </Frame>
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Frame Background="#F9D1C0"
+                       Grid.Column="0">
+                    <Grid>
+                        <StackLayout Spacing="0">
+                            <Image Source="preferences_icon.png"
+                               WidthRequest="64"
+                               MinimumWidthRequest="32"/>
+                            <Label/>
+                            <Label Text="Предпочтения"
+                               HorizontalOptions="Center"
+                               FontAttributes="Bold"
+                               FontSize="16"/>
+                            <Label Text="Выберите свой рацион"
+                               HorizontalOptions="Center"
+                               FontSize="10.24"/>
+                        </StackLayout>
+                        <Button x:Name="CategoryFoodPage_Button"
+                                HorizontalOptions="FillAndExpand"
+                                VerticalOptions="FillAndExpand"
+                                BackgroundColor="Transparent"
+                                Command="{Binding ToCategoryFoodPageCommand}"/>
+                    </Grid>
+                </Frame>
+                <Frame Background="#F3BFA8"
+                       Grid.Column="1">
+                    <StackLayout Spacing="0">
+                        <Image Source="donate_icon.png"
+                               WidthRequest="64"
+                               MinimumWidthRequest="32"/>
+                        <Label/>
+                        <Label Text="Пожертвование"
+                               HorizontalOptions="Center"
+                               FontAttributes="Bold"
+                               FontSize="16"/>
+                        <Label Text="Поддержите наш проект"
+                               HorizontalOptions="Center"
+                               FontSize="10.24"/>
+                        <Label/>
+                    </StackLayout>
+                </Frame>
+            </Grid>
+
+            <Frame BackgroundColor="#9EC1CB">
+                <Grid>
+                    <StackLayout Spacing="0">
+                        <Label Text="Обновление 0.2"
+                           FontAttributes="Bold"
+                           FontSize="31"/>
+                        <Label Text="Новые функции!"/>
+                        <Label LineBreakMode="WordWrap"
+                           FontSize="10.24"
+                           Text="Мы добавили для вас новые функции: &#10;- Рассчёт ИМТ&#10;- Редактирование данных профиля&#10;- Генерация рациона&#10;И т.д."/>
+                        <Label Text="Подробнее..."
+                           HorizontalOptions="End"
+                           FontSize="10.24"/>
+                    </StackLayout>
+                    <Button x:Name="UpdateDiscription_Button"
+                                    HorizontalOptions="FillAndExpand"
+                                    VerticalOptions="FillAndExpand"
+                                    BackgroundColor="Transparent"
+                                    Command="{Binding ToUpdateDiscriptionPageCommand}"/>
+                </Grid>
+            </Frame>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

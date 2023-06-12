@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Pandiet.Views.UpdateDiscriptionPage"
+             Background="Black">
+
+    <ContentPage.Resources>
+        <Style TargetType="Label">
+            <Setter Property="TextColor" Value="White"/>
+        </Style>
+    </ContentPage.Resources>
+    
+    <ContentPage.Content>
+
+        <ScrollView>
+
+            <StackLayout Spacing="100">
+
+                <StackLayout Margin="15"
+                             Spacing="20">
+                    <Label Text="Обновление 0.2"
+                           FontSize="36"
+                           FontAttributes="Bold"/>
+                    <StackLayout>
+                        <Label FontSize="24"
+                               Text="Подбор рациона"
+                               FontAttributes="Bold"/>
+                        <Label FontSize="16"
+                               Text="Была реализована функция подбора рациона, автоматический подбор блюд в зависимости от выбранных пользователем категорий еды"/>
+                    </StackLayout>
+
+                    <StackLayout>
+                        <Label FontSize="24"
+                               Text="ИМТ"
+                               FontAttributes="Bold"/>
+                        <Label FontSize="16"
+                               Text="Добавлена возможность рассчёта индекса массы тела во вкладке профиля пользователя, для этого необходимо ввести свой текущий вес и рост"/>
+                    </StackLayout>
+
+                    <StackLayout>
+                        <Label FontSize="24"
+                               Text="Редактирование данных пользователя"
+                               FontAttributes="Bold"/>
+                        <Label FontSize="16"
+                               Text="Теперь можно редактировать следующие данные пользователя: Дата рождения, вес, пол"/>
+                    </StackLayout>
+                </StackLayout>
+                
+                <StackLayout Margin="15"
+                             Spacing="20">
+                    <Label Text="Обновление 0.1"
+                           FontSize="36"
+                           FontAttributes="Bold"/>
+                    <StackLayout>
+                        <Label FontSize="24"
+                               Text="Основная структура приложения"
+                               FontAttributes="Bold"/>
+                        <Label FontSize="16"
+                               Text="Была реализована основная структура приложения, а так же все сущности базы данных, подключённой в виде модели к приложению Xamarin Forms"/>
+                    </StackLayout>
+
+                    <StackLayout>
+                        <Label FontSize="24"
+                               Text="Регистрация пользователя"
+                               FontAttributes="Bold"/>
+                        <Label FontSize="16"
+                               Text="Добавлена возможность регистрации пользователя, а так же редактирования некоторых его параметров в настройках профиля"/>
+                    </StackLayout>
+
+                    <StackLayout>
+                        <Label FontSize="24"
+                               Text="Рецепты и цели"
+                               FontAttributes="Bold"/>
+                        <Label FontSize="16"
+                               Text="Добавлены первые рецепты и цели для пользователей"/>
+                    </StackLayout>
+                </StackLayout>
+
+            </StackLayout>
+          
+        </ScrollView>
+        
+    </ContentPage.Content>
+</ContentPage>

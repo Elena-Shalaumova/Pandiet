@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Pandiet.Views.GoalsPage"
+             Background="#F9D1C0">
+    <ContentPage.Content>
+        <ScrollView>
+            <ListView x:Name="MyListView"
+                      HasUnevenRows="True"
+                      Footer=""
+                      SelectionMode="None"
+                      ItemTapped="MyListView_ItemTapped">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+
+                            <Frame BackgroundColor="#AED2C4"
+                                   CornerRadius="15"
+                                   Margin="15"
+                                   Visual="Material">
+                                <Grid>
+                                    <StackLayout>
+
+                                        <StackLayout Orientation="Horizontal">
+                                            <Frame WidthRequest="120"
+                                                   HeightRequest="75"
+                                                   CornerRadius="15"
+                                                   BackgroundColor="Transparent">
+                                                <Grid HorizontalOptions="FillAndExpand"
+                                                      VerticalOptions="FillAndExpand">
+                                                    <Image x:Name="Goal_Image"
+                                                           Aspect="AspectFit"
+                                                           Scale="2.5">
+                                                        <Image.Source>
+                                                            <UriImageSource Uri="{Binding Image}"/>
+                                                        </Image.Source>
+                                                    </Image>
+                                                </Grid>
+                                            </Frame>
+                                            <StackLayout Margin="10">
+                                                <Label Text="{Binding Name}"
+                                                       x:Name="GoalName_Label"
+                                                       FontSize="18"
+                                                       FontAttributes="Bold"/>
+                                                <StackLayout Orientation="Horizontal">
+                                                    <Label FontSize="14"
+                                                           Text="Длительность:"/>
+                                                    <Label Text="{Binding Duration}"
+                                                           x:Name="GoalDuration_Label"
+                                                           FontSize="14"/>
+                                                    <Label FontSize="14"
+                                                           Text="год."/>
+                                                </StackLayout>
+                                                
+                                            </StackLayout>
+                                        </StackLayout>
+
+                                        <StackLayout Margin="10">
+                                            <Label Text="Описание"
+                                                   FontSize="24"
+                                                   FontAttributes="Bold"/>
+                                            <Label Text="{Binding Description}"
+                                                   x:Name="GoalDescription_Label"
+                                                   FontSize="16"
+                                                   LineBreakMode="WordWrap"/>
+                                        </StackLayout>
+                                    </StackLayout>
+                                </Grid>
+
+                            </Frame>
+
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

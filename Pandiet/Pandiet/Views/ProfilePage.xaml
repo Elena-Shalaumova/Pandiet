@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Pandiet.Views.ProfilePage"
+             BackgroundColor="#C5E5BE">
+
+    <ContentPage.Resources>
+        <Style TargetType="Button">
+            <Setter Property="TextColor" Value="#00232D"/>
+            <Setter Property="CornerRadius" Value="15"/>
+        </Style>
+        <Style TargetType="Label">
+            <Setter Property="TextColor" Value="White"/>
+        </Style>
+    </ContentPage.Resources>
+
+    <ContentPage.Content>
+        <StackLayout Spacing="0"
+                     VerticalOptions="CenterAndExpand"
+                     Padding="20">
+            <Label Text="ПРОФИЛЬ"
+                   FontSize="31"
+                   FontAttributes="Bold"/>
+            <StackLayout>
+            <Frame BackgroundColor="#9EC1CB"
+                   VerticalOptions="CenterAndExpand"
+                   CornerRadius="15">
+                <StackLayout>
+                    
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <StackLayout Grid.Column="0">
+                                <Image Source="demo_user.png"/>
+                            </StackLayout>
+                        <StackLayout Grid.Column="1"
+                                     Margin="5">
+                            <Label Text=""
+                                   x:Name="UserName_Label"
+                                   FontAttributes="Bold"
+                                   FontSize="25"/>
+                            <Label Text=""
+                                   x:Name="ProfileMode_Label"/>
+                            <Button Text="Улучшить"
+                                    BackgroundColor="#B9E5B0"
+                                    Scale="0.8"/>
+                        </StackLayout>
+                    </Grid>
+
+                        <StackLayout Padding="10"
+                                     Spacing="15">
+                            <Label Text=""
+                                   x:Name="DateBirthday_Label"
+                                   FontSize="16"/>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+                                <Label Text=""
+                                       x:Name="Weight_Label"
+                                       FontSize="16"
+                                       Grid.Column="0"
+                                       VerticalOptions="CenterAndExpand"/>
+                                <Button Text="Изменить"
+                                    Grid.Column="1"
+                                    Background="#F9D1C0"
+                                    Scale="0.8"
+                                        Clicked="Button_Clicked_1"/>
+                            </Grid>
+                            <Label Text=""
+                                   x:Name="Gender_Label"
+                                   FontSize="16"/>
+                        </StackLayout>
+                        <Button Text="Рассчитать ИМТ"
+                                Grid.Column="1"
+                                Background="#F9D1C0"
+                                Scale="0.8"
+                                Clicked="Button_Clicked"/>
+                        <Label/>
+                        <Label Text=""
+                               x:Name="UserID_Label"
+                               FontSize="16"
+                               FontAttributes="Bold"
+                               HorizontalTextAlignment="Center"
+                               VerticalOptions="EndAndExpand"/>
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

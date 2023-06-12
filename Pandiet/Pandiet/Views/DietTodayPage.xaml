@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Pandiet.Views.DietTodayPage"
+             Background="#6A8D97">
+
+    <ContentPage.Resources>
+        <Style TargetType="Label">
+            <Setter Property="TextColor" Value="White"/>
+        </Style>
+    </ContentPage.Resources>
+    
+    <ContentPage.Content>
+        <ScrollView Padding="20">
+            <StackLayout>
+
+                <Label Text="ЗАВТРАК"
+                       FontSize="36"
+                       FontAttributes="Bold"/>
+                <Frame BackgroundColor="#AED2C4"
+                       CornerRadius="15">
+                    <Grid>
+
+                        <StackLayout>
+                            <StackLayout Orientation="Horizontal">
+                                <Frame WidthRequest="120"
+                                       HeightRequest="75"
+                                       CornerRadius="15"
+                                       BackgroundColor="Transparent">
+                                    <Grid HorizontalOptions="FillAndExpand"
+                                          VerticalOptions="FillAndExpand">
+                                        <Image x:Name="BreakfastDishImage_Image"
+                                               Scale="2.5"/>
+                                    </Grid>
+                                </Frame>
+                                <StackLayout Margin="10">
+                                    <Label Text=""
+                                           x:Name="BreakfastDishName_Label"
+                                           FontSize="18"
+                                           FontAttributes="Bold"/>
+                                    <Label Text=""
+                                           x:Name="BreakfastDishCalories_Label"
+                                           FontSize="14"/>
+                                </StackLayout>
+                            </StackLayout>
+                            <StackLayout Margin="10">
+                                <Label Text="Описание"
+                                       FontSize="24"
+                                       FontAttributes="Bold"/>
+                                <Label Text=""
+                                       x:Name="BreakfastDishDescription_Label"
+                                       FontSize="16"
+                                       LineBreakMode="WordWrap"/>
+                                <Label Text="Детальнее..."
+                                       HorizontalOptions="End"
+                                       FontSize="12"/>
+                            </StackLayout>
+                        </StackLayout>
+                        <Button Scale="1.2"
+                                BackgroundColor="Transparent"
+                                x:Name="BreakfastDish_Button"
+                                Clicked="BreakfastDish_Button_Clicked"/>
+                    </Grid>
+
+                </Frame>
+
+                <Label Text="ОБЕД"
+                       FontSize="36"
+                       FontAttributes="Bold"/>
+                <Frame BackgroundColor="#AED2C4"
+                       CornerRadius="15">
+                    <Grid>
+
+                        <StackLayout>
+                            <StackLayout Orientation="Horizontal">
+                                <Frame WidthRequest="120"
+                                       HeightRequest="75"
+                                       CornerRadius="15"
+                                       BackgroundColor="Transparent">
+                                    <Grid HorizontalOptions="FillAndExpand"
+                                          VerticalOptions="FillAndExpand">
+                                        <Image x:Name="LunchDishImage_Image"
+                                               Scale="2.5"/>
+                                    </Grid>
+                                </Frame>
+                                <StackLayout Margin="10">
+                                    <Label Text=""
+                                           x:Name="LunchDishName_Label"
+                                           FontSize="18"
+                                           FontAttributes="Bold"/>
+                                    <Label Text=""
+                                           x:Name="LunchDishCalories_Label"
+                                           FontSize="14"/>
+                                </StackLayout>
+                            </StackLayout>
+                            <StackLayout Margin="10">
+                                <Label Text="Описание"
+                                       FontSize="24"
+                                       FontAttributes="Bold"/>
+                                <Label Text=""
+                                       x:Name="LunchDishDescription_Label"
+                                       FontSize="16"
+                                       LineBreakMode="WordWrap"/>
+                                <Label Text="Детальнее..."
+                                       HorizontalOptions="End"
+                                       FontSize="12"/>
+                            </StackLayout>
+                        </StackLayout>
+                        <Button Scale="1.2"
+                                BackgroundColor="Transparent"
+                                x:Name="LunchDish_Button"
+                                Clicked="LunchDish_Button_Clicked"/>
+                    </Grid>
+
+                </Frame>
+
+                <Label Text="УЖИН"
+                       FontSize="36"
+                       FontAttributes="Bold"/>
+                <Frame BackgroundColor="#AED2C4"
+                       CornerRadius="15">
+                    <Grid>
+                        <StackLayout>
+                            <StackLayout Orientation="Horizontal">
+                                <Frame WidthRequest="120"
+                                       HeightRequest="75"
+                                       CornerRadius="15"
+                                       BackgroundColor="Transparent">
+                                    <Grid HorizontalOptions="FillAndExpand"
+                                          VerticalOptions="FillAndExpand">
+                                        <Image x:Name="DinnerDishImage_Image"
+                                               Scale="2.5"/>
+                                    </Grid>
+                                </Frame>
+                                <StackLayout Margin="10">
+                                    <Label Text=""
+                                           x:Name="DinnerDishName_Label"
+                                           FontSize="18"
+                                           FontAttributes="Bold"/>
+                                    <Label Text=""
+                                           x:Name="DinnerDishCalories_Label"
+                                           FontSize="14"/>
+                                </StackLayout>
+                            </StackLayout>
+                            <StackLayout Margin="10">
+                                <Label Text="Описание"
+                                       FontSize="24"
+                                       FontAttributes="Bold"/>
+                                <Label Text=""
+                                       x:Name="DinnerDishDescription_Label"
+                                       FontSize="16"
+                                       LineBreakMode="WordWrap"/>
+                                <Label Text="Детальнее..."
+                                       HorizontalOptions="End"
+                                       FontSize="12"/>
+                            </StackLayout>
+                        </StackLayout>
+                        <Button Scale="1.2"
+                                BackgroundColor="Transparent"
+                                x:Name="DinnerDish_Button"
+                                Clicked="DinnerDish_Button_Clicked"/>
+                    </Grid>
+
+                </Frame>
+
+
+            </StackLayout>
+        </ScrollView>
+        
+        
+    </ContentPage.Content>
+</ContentPage>

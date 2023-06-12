@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Pandiet.MainPage"
+             Background="#6A8D97">
+
+    <Grid>
+        <Image Source="Background.png"
+               Aspect="AspectFill"/>
+        <StackLayout>
+            <StackLayout Orientation="Horizontal"
+                         VerticalOptions="CenterAndExpand">
+                <Image Source="Logo.png"
+                       HeightRequest="64"/>
+                <StackLayout Spacing="0">
+                    <Label Text="Pandiet"
+                           TextColor="White"
+                           FontSize="39.06"
+                           FontAttributes="Bold"
+                           FontFamily="Inter"/>
+                    <Label Text="Your pocket cook!"
+                           TextColor="White"
+                           FontSize="12.80"
+                           FontFamily="Inter"/>
+                </StackLayout>
+            </StackLayout>
+            <Frame CornerRadius="20"
+                   BackgroundColor="#F9D1C0"
+                   VerticalOptions="StartAndExpand">
+                <StackLayout Padding="40" Visual="Material">
+                    <Entry Placeholder="Никнейм"
+                           PlaceholderColor="#00232D"
+                           Margin="10"
+                           x:Name="Login_Entry"
+                           TextColor="#00232D"/>
+                    <Entry Placeholder="Пароль"
+                           PlaceholderColor="#00232D"
+                           Margin="10"
+                           IsPassword="True"
+                           x:Name="Password_Entry"
+                           TextColor="#00232D"/>
+                    <Button BackgroundColor="#00232D"
+                            CornerRadius="10"
+                            Margin="10"
+                            Text="Авторизоваться"
+                            x:Name="Login_Button"
+                            TextColor="White"
+                             Clicked="Login_Button_Clicked"/>
+                    <Button BackgroundColor="White"
+                            CornerRadius="10"
+                            Margin="10"
+                            Text="Зарегистрироваться"
+                            x:Name="ToRegistrationPage_Button"
+                            Command="{Binding ToRegistrationPageCommand}"
+                            TextColor="#00232D"/>
+                </StackLayout>
+            </Frame>
+            <Label Text="Shalaumova. 2023"
+                   FontSize="12.80"
+                   TextColor="White"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"/>
+        </StackLayout>
+    </Grid>
+
+</ContentPage>

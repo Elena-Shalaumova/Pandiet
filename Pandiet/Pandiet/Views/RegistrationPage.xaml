@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Pandiet.Views.RegistrationPage"
+             Background="#6A8D97">
+    <ContentPage.Content>
+        <Grid>
+            <Image Source="Background.png"
+                   Aspect="AspectFill"/>
+            <StackLayout Spacing="0">
+                <Label Text="РЕГИСТРАЦИЯ"
+                       TextColor="White"
+                       FontAttributes="Bold"
+                       FontSize="31"
+                       VerticalOptions="EndAndExpand"
+                       Margin="10"/>
+                <Frame CornerRadius="20"
+                       BackgroundColor="#F9D1C0"
+                       VerticalOptions="StartAndExpand"
+                       Visual="Material">
+                    <StackLayout Padding="40">
+                        <Entry Placeholder="Никнейм..."
+                               PlaceholderColor="#00232D"
+                               Margin="10"
+                               x:Name="Login_Entry"
+                               TextColor="#00232D"/>
+                        <Entry Placeholder="Пароль..."
+                               PlaceholderColor="#00232D"
+                               Margin="10"
+                               x:Name="Password_Entry"
+                               TextColor="#00232D"/>
+                        <DatePicker Margin="10"
+                                    x:Name="Date_DatePicker"
+                                    TextColor="#00232D"/>
+                        <Picker Margin="10"
+                                x:Name="Gender_Picker"
+                                Title="Пол..."
+                                TitleColor="#00232D"
+                                ItemDisplayBinding="{Binding Name}"
+                                FontSize="Large"/>
+                        <Entry Placeholder="Вес..."
+                               PlaceholderColor="#00232D"
+                               Margin="10"
+                               x:Name="Weight_Entry"
+                               TextColor="#00232D"/>
+                        <Button BackgroundColor="#00232D"
+                                CornerRadius="10"
+                                Margin="10"
+                                Text="Принять"
+                                x:Name="Registration_Button"
+                                TextColor="White"
+                                Clicked="Registration_Button_Clicked"/>
+                        <Button BackgroundColor="White"
+                                CornerRadius="10"
+                                Margin="10"
+                                Text="Назад"
+                                Command="{Binding ToBackPageCommand}"
+                                TextColor="#00232D"/>
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

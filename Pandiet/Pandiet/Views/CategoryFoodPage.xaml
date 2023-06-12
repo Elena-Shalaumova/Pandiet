@@ -1,0 +1,180 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Pandiet.Views.CategoryFoodPage"
+             Background="#F9D1C0">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Label">
+                <Setter Property="FontSize" Value="18"/>
+                <Setter Property="VerticalOptions" Value="CenterAndExpand"/>
+                <Setter Property="TextColor" Value="White"/>
+            </Style>
+            
+            <Style TargetType="Switch">
+                <Setter Property="OnColor" Value="#C5E5BE"/>
+                <Setter Property="ThumbColor" Value="#C5E5BE"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+    <ContentPage.Content>
+        <StackLayout Spacing="0">
+            <Label Text="КАТЕГОРИИ"
+                   FontSize="31"
+                   FontAttributes="Bold"
+                   Padding="15"
+                   VerticalOptions="EndAndExpand"
+                   TextColor="White"/>
+            <Frame BackgroundColor="#AED2C4"
+                   Margin="15"
+                   CornerRadius="15">
+                <ScrollView>
+                    <StackLayout Spacing="20">
+                        <StackLayout Orientation="Horizontal"
+                                     x:Name="Cereals_StackLayout">
+                            <Switch Toggled="Cereals_Switch_Toggled"
+                                    x:Name="Cereals_Switch"/>
+                            <Label Text="Злаки"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal"
+                                     x:Name="Nuts_StackLayout">
+                            <Switch Toggled="Nuts_Switch_Toggled"
+                                    x:Name="Nuts_Switch"/>
+                            <Label Text="Орехи"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal"
+                                     x:Name="Legumes_StackLayout">
+                            <Switch Toggled="Legumes_Switch_Toggled"
+                                    x:Name="Legumes_Switch"/>
+                            <Label Text="Бобовые"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal"
+                                     x:Name="Oilseeds_StackLayout">
+                            <Switch Toggled="Oilseeds_Switch_Toggled"
+                                    x:Name="Oilseeds_Switch"/>
+                            <Label Text="Масличные"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal"
+                                     x:Name="Fruits_StackLayout">
+                            <Switch Toggled="Fruits_Switch_Toggled"
+                                    x:Name="Fruits_Switch"/>
+                            <Label Text="Фрукты"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal"
+                                     x:Name="Citrus_StackLayout">
+                            <Switch Toggled="Citrus_Switch_Toggled"
+                                    x:Name="Citrus_Switch"/>
+                            <Label Text="Цитрусовые"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal"
+                                     x:Name="Berries_StackLayout">
+                            <Switch Toggled="Berries_Switch_Toggled"
+                                    x:Name="Berries_Switch"/>
+                            <Label Text="Ягоды"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal"
+                                     x:Name="FruitVegetables_StackLayout">
+                            <Switch Toggled="FruitVegetables_Switch_Toggled"
+                                    x:Name="FruitVegetables_Switch"/>
+                            <Label Text="Плодовые овощи"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal"
+                                     x:Name="Roots_StackLayout">
+                            <Switch Toggled="Roots_Switch_Toggled"
+                                    x:Name="Roots_Switch"/>
+                            <Label Text="Корнеплоды"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal"
+                                     x:Name="LeafyVegetables_StackLayout">
+                            <Switch Toggled="LeafyVegetables_Switch_Toggled"
+                                    x:Name="LeafyVegetables_Switch"/>
+                            <Label Text="Листовые овощи"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal"
+                                     x:Name="FragrantGreens_StackLayout">
+                            <Switch Toggled="FragrantGreens_Switch_Toggled"
+                                    x:Name="FragrantGreens_Switch"/>
+                            <Label Text="Душистая зелень"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal"
+                                     x:Name="Bulbous_StackLayout">
+                            <Switch Toggled="Bulbous_Switch_Toggled"
+                                    x:Name="Bulbous_Switch"/>
+                            <Label Text="Луковичные"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal"
+                                     x:Name="Stem_StackLayout">
+                            <Switch Toggled="Stem_Switch_Toggled"
+                                    x:Name="Stem_Switch"/>
+                            <Label Text="Стебелевые"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal"
+                                     x:Name="HerbsAndSpices_StackLayout">
+                            <Switch Toggled="HerbsAndSpices_Switch_Toggled"
+                                    x:Name="HerbsAndSpices_Switch"/>
+                            <Label Text="Травы и пряности"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal"
+                                     x:Name="Meat_StackLayout">
+                            <Switch Toggled="Meat_Switch_Toggled"
+                                    x:Name="Meat_Switch"/>
+                            <Label Text="Мясо"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal"
+                                     x:Name="MilkAndDairyProducts_StackLayout">
+                            <Switch Toggled="MilkAndDairyProducts_Switch_Toggled"
+                                    x:Name="MilkAndDairyProducts_Switch"/>
+                            <Label Text="Молоко и молочные продукты"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal"
+                                     x:Name="Eggs_StackLayout">
+                            <Switch Toggled="Eggs_Switch_Toggled"
+                                    x:Name="Eggs_Switch"/>
+                            <Label Text="Яйца"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal"
+                                     x:Name="FishAndCaviar_StackLayout">
+                            <Switch Toggled="FishAndCaviar_Switch_Toggled"
+                                    x:Name="FishAndCaviar_Switch"/>
+                            <Label Text="Рыба и икра"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal"
+                                     x:Name="MollusksAndCrustaceans_StackLayout">
+                            <Switch Toggled="MollusksAndCrustaceans_Switch_Toggled"
+                                    x:Name="MollusksAndCrustaceans_Switch"/>
+                            <Label Text="Моллюски и ракообразные"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal"
+                                     x:Name="Mushrooms_StackLayout">
+                            <Switch Toggled="Mushrooms_Switch_Toggled"
+                                    x:Name="Mushrooms_Switch"/>
+                            <Label Text="Грибы"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal"
+                                     x:Name="Yeast_StackLayout">
+                            <Switch Toggled="Yeast_Switch_Toggled"
+                                    x:Name="Yeast_Switch"/>
+                            <Label Text="Дрожжевые"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal"
+                                     x:Name="Seaweed_StackLayout">
+                            <Switch Toggled="Seaweed_Switch_Toggled"
+                                    x:Name="Seaweed_Switch"/>
+                            <Label Text="Водоросли"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal"
+                                     x:Name="Corn_StackLayout">
+                            <Switch Toggled="Corn_Switch_Toggled"
+                                    x:Name="Corn_Switch"/>
+                            <Label Text="Зерновые"/>
+                        </StackLayout>
+                    </StackLayout>
+                </ScrollView>
+            </Frame>
+           
+        </StackLayout>
+        
+    </ContentPage.Content>
+</ContentPage>

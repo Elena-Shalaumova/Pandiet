@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Pandiet.Views.SettingsPage"
+             BackgroundColor="#AED2C4">
+
+    <ContentPage.Resources>
+        <Style TargetType="Label">
+            <Setter Property="TextColor" Value="White"/>
+        </Style>
+        <Style TargetType="RadioButton">
+            <Setter Property="Visual" Value="Material"/>
+        </Style>
+    </ContentPage.Resources>
+    
+    <ContentPage.Content>
+
+        <StackLayout Spacing="0"
+                     VerticalOptions="CenterAndExpand"
+                     Padding="20">
+            <Label Text="НАСТРОЙКИ"
+                   FontSize="31"
+                   FontAttributes="Bold"/>
+            <StackLayout>
+                <Frame BackgroundColor="#9EC1CB"
+                   VerticalOptions="CenterAndExpand"
+                   CornerRadius="15">
+                    <StackLayout Spacing="10"
+                                 Margin="10">
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="Включить уведомления:"
+                                   FontSize="16"/>
+                            <Switch OnColor="#AED2C4"
+                                    ThumbColor="#C5E5BE"
+                                    HorizontalOptions="EndAndExpand"
+                                    x:Name="Notifications_Switch"
+                                    Toggled="Notifications_Switch_Toggled"/>
+                        </StackLayout>
+                        <Frame Visual="Material"
+                               BackgroundColor="Transparent"
+                               HasShadow="False">
+                            <StackLayout>
+                                <Label Text="Режим работы"
+                               FontSize="20"
+                               FontAttributes="Bold"
+                               HorizontalTextAlignment="Center"/>
+                            <RadioButton GroupName="Mode"
+                                         Content="Обычный"
+                                         IsChecked="True"
+                                         TextColor="White"
+                                         x:Name="Normal_RadioButton"
+                                         CheckedChanged="RadioButton_CheckedChanged"
+                                         HorizontalOptions="StartAndExpand"/>
+                            <RadioButton GroupName="Mode"
+                                         Content="Аллергик"
+                                         TextColor="White"
+                                         x:Name="Allergic_RadioButton"
+                                         CheckedChanged="RadioButton_CheckedChanged"
+                                         HorizontalOptions="StartAndExpand"/>
+                            <RadioButton GroupName="Mode"
+                                         Content="Вегетарианец"
+                                         TextColor="White"
+                                         x:Name="Vegetarian_RadioButton"
+                                         CheckedChanged="RadioButton_CheckedChanged"
+                                         HorizontalOptions="StartAndExpand"/>
+                        </StackLayout>
+                        </Frame>
+                        <Label Text="Ver: 0.2"
+                               FontSize="16"
+                               HorizontalTextAlignment="End"/>
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>
